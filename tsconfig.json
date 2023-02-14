@@ -20,7 +20,6 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    // Rules
     "noImplicitAny": false,
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -34,7 +33,8 @@
     "./src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ]
 }
 

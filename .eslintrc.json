@@ -15,19 +15,18 @@
     "jest-dom"
   ],
   "extends": [
-    "airbnb",
     "plugin:react/recommended",
     "plugin:import/recommended"
   ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", "tsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", "tsx"] }],
     "import/extensions": "off"
   },
   "settings": {
     "import/resolver": {
       "node": {
         "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".ts", ".tsx"]
       }
     },
     "import/parsers": {
@@ -43,14 +42,15 @@
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "tsx": true
     },
     "project": "./tsconfig.json"
+
   },
   "overrides": [
     {
       "plugins": ["jest"],
-      "files": ["test/**/*.spec.js", "test/setup-*.js"],
+      "files": ["test/**/*.spec.ts", "test/setup-*.ts"],
       "env": {
         "jest": true
       },
@@ -60,5 +60,6 @@
         "plugin:testing-library/react"
       ]
     }
-  ]
+  ],
+  "ignorePatterns": ["craco.config.js"]
 }
